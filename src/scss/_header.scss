@@ -1,0 +1,115 @@
+.header {
+  border-top: #e6e8eb solid 1px;
+  border-bottom: #e6e8eb solid 1px;
+  padding: 10px 0;
+}
+.wrapper {
+  @include col();
+  @include make-col(8);
+  display: flex;
+  align-items: center;
+}
+
+.profile-menu {
+  @include col();
+  @include make-col(auto);
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 0;
+
+  &__icon {
+    padding-right: 20px;
+    width: 30px;
+    height: 30px;
+  }
+
+  @include  media($b-lg) {
+    @include make-col(3);
+  }
+
+}
+
+.logo {
+  @include col();
+  @include make-col(2);
+  margin-left: 0;
+
+  @include  media($b-lg) {
+    @include make-col(12);
+    display: flex;
+    padding-bottom: 20px;
+  }
+
+  img {
+    @include  media($b-lg) {
+      margin: auto;
+    }
+  }
+}
+.nav {
+  @include col();
+  @include make-col(7);
+  @include  media($b-lg) {
+    @include make-col(auto);
+  }
+
+  @include  media($b-md) {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: -100px;
+    left: 0;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    margin: 0;
+    background-color: darken(#ff5912, 30);
+    opacity: .9;
+    padding: 10px 0;
+  }
+  transition: background-color 0.9s;
+
+
+  &__item {
+    text-decoration: none;
+    color: $primary-color;
+    font-family: $font-roboto;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    padding-right: 20px;
+
+    @include  media($b-lg) {
+      padding-right: 10px;
+    }
+    @include  media($b-md) {
+      font-size: 1.3em;
+      color: #fff;
+      font-weight: bold;
+
+    }
+
+    &:hover {
+      color: $active-color;
+    }
+  }
+}
+
+.count {
+  position: relative;
+  &::before {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    content: '5';
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    top: -10px;
+    left: 7px;
+
+    background-color: #000;
+    color: #fff;
+    font-size: 1em;
+  }
+}

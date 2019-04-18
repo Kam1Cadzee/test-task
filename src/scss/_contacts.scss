@@ -1,0 +1,46 @@
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: $dark-grey;
+  cursor: pointer;
+
+  &_active {
+    fill: $active-color;
+    cursor: inherit;
+  }
+  &_light {
+    fill: $light-grey;
+  }
+  &:hover {
+    fill: $active-color;
+  }
+}
+.share {
+  &__icon {
+    padding-right: 10px;
+  }
+}
+.header-contact {
+  padding: 20px 0;
+
+   & .share {
+    @include  media($b-sm) {
+      display: none;
+    }
+  }
+  @include  media($b-sm) {
+    flex-direction: column;
+  }
+}
+.contacts {
+  display: flex;
+  &__mail {
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+}
+.phone {
+  display: flex;
+  align-items: center;
+}
