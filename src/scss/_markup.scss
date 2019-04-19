@@ -1,0 +1,18 @@
+.container {
+  @include container();
+  @include  media($b-xl) {
+    @include container(90%);
+  }
+
+}
+.row {
+  @include row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

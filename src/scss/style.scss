@@ -1,25 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 @import "variables";
 @import "v-grid";
+@import "markup";
+
+
 @import "contacts";
 @import "text";
 @import "header";
 @import "content";
 @import "hamburger";
-
-
-.container {
-  @include container();
-
-}
-.row {
-  @include row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
+@import "icon";

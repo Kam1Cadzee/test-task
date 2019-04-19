@@ -1,0 +1,17 @@
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: $dark-grey;
+  cursor: pointer;
+
+  &_active {
+    fill: $active-color;
+    cursor: inherit;
+  }
+  &_light {
+    fill: $light-grey;
+  }
+  &:hover {
+    fill: $active-color;
+  }
+}
